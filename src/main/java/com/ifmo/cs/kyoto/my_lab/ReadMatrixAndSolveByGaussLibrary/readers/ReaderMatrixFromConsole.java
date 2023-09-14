@@ -63,9 +63,11 @@ public class ReaderMatrixFromConsole extends MatrixReader {
                     }
                     B[i] = in.nextDouble();
                 }
+                in.close();
                 return;
             } catch (InputMismatchException exception) {
                 System.out.println("Incorrect input, try again.");
+                in = new Scanner(System.in);
             }
         }
     }
